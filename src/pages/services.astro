@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const emergencyPhone = "0472 90 18 45";
+const emergencyPhoneRaw = "+32472901845";
+---
+
+<Layout 
+  title="Services de Plomberie & Chauffage à Tournai | xtense" 
+  description="Découvrez l'ensemble des prestations xtense à Tournai : débouchage canalisations haute pression, recherche et réparation de fuites, dépannage chaudière, rénovation de salle de bain."
+>
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <span class="badge-tag">Nos Domaines d'Intervention</span>
+      <h1 class="section-title">Prestations Plomberie & Chauffage à Tournai</h1>
+      <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
+        Que ce soit pour une rupture de canalisation en urgence ou la rénovation sur-mesure de votre installation sanitaire, nos techniciens certifiés garantissent une intervention rapide et soignée.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detailed Services -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- 1. Débouchage -->
+      <div id="debouchage" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+        <div>
+          <span class="badge-tag">Haute Pression & Furet Électrique</span>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Débouchage de Canalisations & Égouts</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+            Un évier qui déborde, une douche qui n'évacue plus ou des toilettes bouchées ? À Tournai et en périphérie, <strong>xtense</strong> intervient en moins de 30 minutes avec un équipement complet pour libérer vos tuyauteries rapidement et durablement.
+          </p>
+          <ul style="list-style: none; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.65rem; color: var(--text-secondary);">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Débouchage WC, cuvettes suspendues et urinoirs</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Débouchage évier de cuisine, siphon et douche à l'italienne</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Hydrocurage haute pression des colonnes d'eaux usées et vannes</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Débouchage de chambre de visite et égout principal</li>
+          </ul>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency">
+              Débouchage urgent : {emergencyPhone}
+            </a>
+            <a href="/contact" class="btn btn-secondary">Demander un devis</a>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">Notre Procédure de Débouchage</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">
+            1. Diagnostic immédiat du refoulement pour déterminer le point de blocage.<br/>
+            2. Élimination du bouchon par furet électro-mécanique ou jet haute pression selon le diamètre.<br/>
+            3. Rinçage abondant et test d'écoulement pour certifier le retour à la normale.
+          </p>
+          <div style="background: rgba(2, 132, 199, 0.1); border-left: 3px solid var(--primary); padding: 0.85rem; border-radius: 4px; font-size: 0.9rem; color: #38bdf8;">
+            Intervention 7j/7 même les jours fériés dans l'entité de Tournai.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Recherche et Réparation de Fuites -->
+      <div id="fuites" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+        <div style="order: 2;">
+          <span class="badge-tag">Non Destructif & Certifié Assurance</span>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Détection & Réparation de Fuite d'Eau</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+            Une surconsommation d'eau inexpliquée sur votre facture, une tache d'humidité sur un mur ou une baisse de pression dans votre circuit ? Nous détectons précisément l'origine du sinistre sans démolition inutile.
+          </p>
+          <ul style="list-style: none; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.65rem; color: var(--text-secondary);">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Caméra thermique infrarouge pour tuyauteries encastrées</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Électro-acoustique pour localiser le sifflement de fuite sous dalle</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Gaz traceur (azote/hydrogène) pour micro-fuites invisibles</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Rapport technique détaillé pour remboursement par votre assurance habitation</li>
+          </ul>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency">
+              Urgence fuite : {emergencyPhone}
+            </a>
+            <a href="/contact" class="btn btn-secondary">Demander un diagnostic</a>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem; order: 1;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">Prise en Charge Dégât des Eaux</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            En Belgique, la majorité des recherches de fuite non destructives sont intégralement remboursées par l'assurance habitation multirisque. Nous vous fournissons photos, mesures et rapport conforme.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); padding: 0.85rem; border-radius: 4px; font-size: 0.9rem; color: #34d399;">
+            Mise en sécurité immédiate du compteur et colmatage provisoire ou définitif.
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Chauffage & Chaudière -->
+      <div id="chauffage" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+        <div>
+          <span class="badge-tag">Habilité Gaz & Mazout</span>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Entretien, Dépannage & Installation Chaudière</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+            Plus d'eau chaude ou radiateurs froids ? Nos chauffagistes qualifiés interviennent sur toutes marques reconnues (Vaillant, Bulex, Bosch, Viessmann, ACV) pour assurer votre sécurité et le bon rendement de vos appareils.
+          </p>
+          <ul style="list-style: none; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.65rem; color: var(--text-secondary);">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Dépannage express de panne de brûleur, circulateur ou carte électronique</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Entretien annuel obligatoire avec attestation de combustion légale en Wallonie</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Désembouage de circuit de radiateurs et plancher chauffant</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Remplacement par chaudière à condensation haute performance énergétique</li>
+          </ul>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency">
+              Dépannage chaudière : {emergencyPhone}
+            </a>
+            <a href="/contact" class="btn btn-secondary">Prendre rendez-vous</a>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">Obligations Légales en Région Wallonne</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            En Wallonie, le contrôle périodique est obligatoire tous les 2 ans pour les chaudières au gaz et chaque année pour les chaudières à mazout. xtense vous délivre l'attestation officielle reconnue par les autorités.
+          </p>
+          <div style="background: rgba(2, 132, 199, 0.1); border-left: 3px solid var(--primary); padding: 0.85rem; border-radius: 4px; font-size: 0.9rem; color: #38bdf8;">
+            Réduction de consommation de carburant de 10 à 15% après un bon réglage.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Rénovation Sanitaire & Chauffe-eau -->
+      <div id="sanitaire" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+        <div style="order: 2;">
+          <span class="badge-tag">Confort & Esthétique</span>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Rénovation Salle de Bain & Sanitaires</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+            Modernisez vos installations sanitaires avec des équipements haut de gamme et économiques en eau. xtense réalise votre projet de A à Z avec un interlocuteur unique.
+          </p>
+          <ul style="list-style: none; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.65rem; color: var(--text-secondary);">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Pose de douche à l'italienne avec étanchéité sous carrelage garantie</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Installation de WC suspendus Geberit à réservoir silencieux</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Remplacement de robinetterie Grohe, Hansgrohe, mitigeurs thermostatiques</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><strong style="color: #38bdf8;">✓</strong> Détartrage et pose de boilers électriques et thermodynamiques</li>
+          </ul>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/contact" class="btn btn-primary">Devis Salle de Bain Gratuit</a>
+            <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-secondary">Discuter de mon projet</a>
+          </div>
+        </div>
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem; order: 1;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 1rem;">Garantie Décennale & Sérénité</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Tous nos travaux de plomberie et réfection de salle de bain sont couverts par notre assurance responsabilité civile et décennale. Matériaux et tuyauteries de haute qualité certifiés KIWA et Belgaqua.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--success); padding: 0.85rem; border-radius: 4px; font-size: 0.9rem; color: #34d399;">
+            Conseils personnalisés pour adapter votre espace aux personnes à mobilité réduite (PMR).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

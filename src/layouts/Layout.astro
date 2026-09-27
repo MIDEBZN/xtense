@@ -1,0 +1,306 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+}
+
+const { 
+  title, 
+  description = "xtense - Artisan plombier chauffagiste certifié à Tournai et sa région. Dépannage d'urgence 24h/7j, débouchage canalisation, réparation fuite d'eau et installation sanitaire.", 
+  canonicalUrl 
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const phone = "069 84 52 10";
+const phoneRaw = "+3269845210";
+const emergencyPhone = "0472 90 18 45";
+const emergencyPhoneRaw = "+32472901845";
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Primary Tags -->
+    <title>{title} | xtense Plomberie Tournai</title>
+    <meta name="title" content={`${title} | xtense Plomberie Tournai`} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="BE-WHT" />
+    <meta name="geo.placename" content="Tournai" />
+    <meta name="geo.position" content="50.6057;3.3878" />
+    <meta name="ICBM" content="50.6057, 3.3878" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={`${title} | xtense Plomberie Tournai`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="fr_BE" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={`${title} | xtense Plomberie Tournai`} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD Plumber LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PlumbingService",
+        "name": "xtense Plomberie Chauffage Tournai",
+        "image": "https://xtense.site/logo.png",
+        "@id": "https://xtense.site/#plumbing",
+        "url": "https://xtense.site",
+        "telephone": "+32472901845",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Grand Place 24",
+          "addressLocality": "Tournai",
+          "postalCode": "7500",
+          "addressRegion": "Hainaut",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.6057,
+          "longitude": 3.3878
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Tournai"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Kain"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Froyennes"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Ere"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Antoing"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Pecq"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Rumes"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Templeuve"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services de plomberie et chauffage",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dépannage plomberie d'urgence 24/7"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Débouchage canalisations et WC"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Recherche et réparation de fuite d'eau"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Entretien et dépannage chaudière"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Rénovation salle de bain et sanitaires"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="header-topbar">
+      <div class="container topbar-content">
+        <div class="topbar-info">
+          <span>📍 Tournai & Wallonie picarde</span>
+          <span>⚡ Intervention sous 30 min</span>
+          <span>⭐ Artisan agréé & devis gratuit</span>
+        </div>
+        <div>
+          <a href={`tel:${emergencyPhoneRaw}`} style="color: #ffffff; font-weight: 700; text-decoration: none;">
+            🚨 Urgence directe 24/7 : {emergencyPhone}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/" class="brand-logo" aria-label="xtense Plomberie Tournai">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <span>xtense<span class="brand-highlight">.</span></span>
+        </a>
+
+        <nav aria-label="Menu principal">
+          <ul class="nav-links">
+            <li><a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>Accueil</a></li>
+            <li><a href="/services" class={`nav-link ${currentPath === '/services' || currentPath.startsWith('/services/') ? 'active' : ''}`}>Services</a></li>
+            <li><a href="/locations" class={`nav-link ${currentPath === '/locations' || currentPath.startsWith('/locations/') ? 'active' : ''}`}>Zones d'intervention</a></li>
+            <li><a href="/about" class={`nav-link ${currentPath === '/about' || currentPath.startsWith('/about/') ? 'active' : ''}`}>À Propos</a></li>
+            <li><a href="/contact" class={`nav-link ${currentPath === '/contact' || currentPath.startsWith('/contact/') ? 'active' : ''}`}>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency" id="nav-call-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Appel Urgence 24/7
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="/" class="brand-logo" style="margin-bottom: 1.25rem;">
+              <div class="logo-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span>xtense<span class="brand-highlight">.</span></span>
+            </a>
+            <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.65; margin-bottom: 1.25rem;">
+              Votre artisan plombier chauffagiste de confiance à Tournai et en Wallonie picarde. Dépannage express sous 30 minutes, devis gratuit sans engagement et travail garanti.
+            </p>
+            <div style="color: #38bdf8; font-weight: 600; font-size: 0.95rem;">
+              📍 Grand Place 24, 7500 Tournai (Hainaut)
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-col-title">Nos Prestations</h3>
+            <ul class="footer-links">
+              <li><a href="/services#depannage">Dépannage d'urgence 24/7</a></li>
+              <li><a href="/services#debouchage">Débouchage canalisations & WC</a></li>
+              <li><a href="/services#fuites">Recherche & réparation fuites</a></li>
+              <li><a href="/services#chauffage">Chaudière & Chauffage</a></li>
+              <li><a href="/services#sanitaire">Rénovation salle de bain</a></li>
+              <li><a href="/services#robinetterie">Changement robinetterie & sanitaires</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-col-title">Zones desservies (Tournai)</h3>
+            <ul class="footer-links">
+              <li><a href="/locations#tournai-centre">Tournai Centre & Grand Place</a></li>
+              <li><a href="/locations#kain">Kain & Froyennes</a></li>
+              <li><a href="/locations#antoing">Antoing & Vaulx</a></li>
+              <li><a href="/locations#pecq">Pecq & Warcoing</a></li>
+              <li><a href="/locations#templeuve">Templeuve & Rumes</a></li>
+              <li><a href="/locations">Toutes nos localités</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-col-title">Contact & Urgences</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+              Équipe disponible 24 heures sur 24 et 7 jours sur 7 pour toutes vos urgences plomberie.
+            </p>
+            <div style="margin-bottom: 0.75rem;">
+              <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency" style="width: 100%;">
+                📞 {emergencyPhone}
+              </a>
+            </div>
+            <div>
+              <a href="mailto:contact@xtense.site" style="color: var(--text-secondary); font-size: 0.9rem; display: block; text-align: center;">
+                ✉️ contact@xtense.site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; {new Date().getFullYear()} xtense Plomberie. Tous droits réservés. TVA: BE0894.312.871.
+          </div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="/about">Mentions Légales</a>
+            <a href="/about">Garantie & Agréments</a>
+            <a href="/contact">Plan d'accès</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

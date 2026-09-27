@@ -1,0 +1,314 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const emergencyPhone = "0472 90 18 45";
+const emergencyPhoneRaw = "+32472901845";
+---
+
+<Layout 
+  title="Plombier à Tournai 24h/7j | Dépannage Immédiat & Devis Gratuit" 
+  description="xtense Plomberie Tournai : artisan plombier chauffagiste certifié. Intervention d'urgence en moins de 30 minutes 24h/7j pour fuites d'eau, débouchage canalisations et chaudière. Devis gratuit."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <span class="badge-tag">Plombier Chauffagiste Certifié à Tournai</span>
+          <h1 class="hero-title">
+            Votre Plombier Dépanneur à <span class="highlight">Tournai</span> & Environs
+          </h1>
+          <p class="hero-desc">
+            Urgence canalisation bouchée, fuite d'eau abondante ou panne de chaudière ? <strong>xtense</strong> intervient chez vous en moins de 30 minutes, 24h/24 et 7j/7 sur toute l'entité de Tournai et sa périphérie. Transparence totale des prix et garantie artisanale.
+          </p>
+          <div class="hero-actions">
+            <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency" id="hero-btn-call">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Dépannage d'urgence : {emergencyPhone}
+            </a>
+            <a href="/contact" class="btn btn-secondary" id="hero-btn-quote">
+              Demander un devis gratuit
+            </a>
+          </div>
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <span class="hero-feature-num">&lt; 30 min</span>
+              <span class="hero-feature-label">Arrivée sur les lieux</span>
+            </div>
+            <div class="hero-feature-item">
+              <span class="hero-feature-num">24h / 7j</span>
+              <span class="hero-feature-label">Urgences & week-ends</span>
+            </div>
+            <div class="hero-feature-item">
+              <span class="hero-feature-num">100%</span>
+              <span class="hero-feature-label">Devis clair avant travaux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Quote Form Card -->
+        <div class="quote-box">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+            <h2 style="font-size: 1.35rem; font-weight: 700; color: #ffffff;">Besoin d'un dépannage rapide ?</h2>
+            <span class="badge-tag badge-emergency" style="margin: 0;">24/7 Actif</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Remplissez ce formulaire express pour un rappel immédiat par un technicien de garde à Tournai.
+          </p>
+
+          <form action="/contact" method="GET">
+            <div class="form-group">
+              <label class="form-label" for="quick-name">Votre nom ou prénom</label>
+              <input type="text" id="quick-name" name="name" class="form-control" placeholder="Ex: Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quick-phone">Numéro de téléphone</label>
+              <input type="tel" id="quick-phone" name="phone" class="form-control" placeholder="Ex: 0472 90 18 45" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quick-service">Type d'intervention</label>
+              <select id="quick-service" name="service" class="form-control">
+                <option value="debouchage">Débouchage urgent (WC, évier, égout)</option>
+                <option value="fuite">Recherche & réparation de fuite d'eau</option>
+                <option value="chauffage">Panne de chaudière / chauffe-eau</option>
+                <option value="renovation">Installation ou rénovation sanitaire</option>
+                <option value="autre">Autre demande spécifique</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              Demander mon intervention immédiate
+            </button>
+          </form>
+          <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+            🔒 Vos données restent strictement confidentielles.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Banner -->
+  <section style="background: linear-gradient(90deg, #991b1b 0%, #ef4444 100%); padding: 1.5rem 0; color: white;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 2rem;">🚨</span>
+        <div>
+          <div style="font-weight: 800; font-size: 1.25rem;">Fuite importante, dégât des eaux ou canalisation refoulée ?</div>
+          <div style="font-size: 0.95rem; opacity: 0.95;">Nos techniciens sont équipés d'outils haute pression et de caméras d'inspection à Tournai.</div>
+        </div>
+      </div>
+      <a href={`tel:${emergencyPhoneRaw}`} class="btn" style="background: #ffffff; color: #b91c1c; font-weight: 800; padding: 0.85rem 1.5rem;">
+        Appelez le {emergencyPhone}
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge-tag">Nos Solutions Plomberie & Chauffage</span>
+        <h2 class="section-title">Interventions Express & Travaux sur Tournai</h2>
+        <p class="section-subtitle">
+          De la réparation minutieuse d'un robinet qui goutte jusqu'au remplacement de chaudière et au débouchage par hydrocurage.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Service 1 -->
+        <div class="card">
+          <div class="card-icon">🚰</div>
+          <h3 class="card-title">Débouchage Urgent & Hydrocurage</h3>
+          <p class="card-text">
+            WC bouché, évier obstrué, colonnes d'évacuation ou regards d'égouts saturés. Débouchage mécanique au furet électrique ou hydrocurage haute pression sans endommager vos conduits.
+          </p>
+          <a href="/services#debouchage" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3 class="card-title">Recherche & Réparation de Fuites</h3>
+          <p class="card-text">
+            Détection de fuite non destructive via caméra thermique infrarouge, corrélation acoustique et gaz traceur. Réparation immédiate sur tuyauteries cuivre, PER et multicouche.
+          </p>
+          <a href="/services#fuites" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card">
+          <div class="card-icon">🔥</div>
+          <h3 class="card-title">Dépannage & Entretien Chaudière</h3>
+          <p class="card-text">
+            Technicien agréé pour chaudières au gaz et mazout (Vaillant, Bulex, Viessmann, Junkers/Bosch). Entretien périodique obligatoire avec attestation officielle et remise en marche rapide.
+          </p>
+          <a href="/services#chauffage" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="card">
+          <div class="card-icon">🛁</div>
+          <h3 class="card-title">Rénovation Sanitaire & Salle de Bain</h3>
+          <p class="card-text">
+            Création complète de salles de bain modernes : douche à l'italienne, pose de baignoire balnéo, WC suspendu Geberit, robinetterie thermostatique et arrivées d'eau sur mesure.
+          </p>
+          <a href="/services#sanitaire" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Chauffe-eau & Boiler Électrique</h3>
+          <p class="card-text">
+            Détartrage complet de boiler, remplacement de résistance stéatite ou thermoplongeur, changement du groupe de sécurité et remplacement à neuf sous 24 heures.
+          </p>
+          <a href="/services#chauffe-eau" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="card">
+          <div class="card-icon">📹</div>
+          <h3 class="card-title">Inspection Caméra Endoscopique</h3>
+          <p class="card-text">
+            Diagnostic précis de l'état intérieur de vos tuyaux avec enregistrement vidéo HD. Détection des racines, fissures, contre-pentes ou affaissements pour vos dossiers d'assurance.
+          </p>
+          <a href="/services#camera" class="btn btn-secondary" style="font-size: 0.875rem;">
+            En savoir plus &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <span class="badge-tag">Pourquoi Choisir xtense ?</span>
+          <h2 class="section-title">L'Artisan Plombier Local de Référence à Tournai</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
+            Depuis de nombreuses années, <strong>xtense</strong> garantit aux habitants de Tournai et des communes voisines un service irréprochable sans mauvaise surprise sur la facture.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="background: rgba(16, 185, 129, 0.15); color: var(--success); padding: 0.5rem; border-radius: 8px; font-weight: 800;">✓</div>
+              <div>
+                <strong style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Tarifs Annoncés et Devis Respecté</strong>
+                <span style="color: var(--text-secondary); font-size: 0.925rem;">Aucun supplément caché. Nous analysons la situation et validons le devis avec vous avant le début des travaux.</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="background: rgba(16, 185, 129, 0.15); color: var(--success); padding: 0.5rem; border-radius: 8px; font-weight: 800;">✓</div>
+              <div>
+                <strong style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Agréments Officiels & Normes Belges</strong>
+                <span style="color: var(--text-secondary); font-size: 0.925rem;">Chauffagistes habilités G1/G2 gaz et mazout, garantissant la validité de vos assurances et certificats de conformité.</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="background: rgba(16, 185, 129, 0.15); color: var(--success); padding: 0.5rem; border-radius: 8px; font-weight: 800;">✓</div>
+              <div>
+                <strong style="color: #ffffff; display: block; margin-bottom: 0.25rem;">Matériel & Pièces d'Origine Fabricant</strong>
+                <span style="color: var(--text-secondary); font-size: 0.925rem;">Nos camionnettes d'intervention disposent d'un stock de pièces certifiées (Geberit, Grohe, Vaillant, Bulex) pour réparer dès le premier passage.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-lg);">
+          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Disponibilité à Tournai</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">
+            Nos camionnettes sillonnent quotidiennement Tournai centre, Kain, Froyennes, Antoing, Pecq, et Templeuve.
+          </p>
+
+          <div style="background: rgba(2, 132, 199, 0.1); border-left: 4px solid var(--primary); padding: 1.25rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; color: #38bdf8; margin-bottom: 0.25rem;">Temps d'arrivée moyen :</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">20 à 35 minutes selon le quartier</div>
+          </div>
+
+          <a href="/locations" class="btn btn-primary" style="width: 100%;">
+            Consulter les localités couvertes &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge-tag">Avis Clients Vérifiés</span>
+        <h2 class="section-title">Ce que disent nos clients à Tournai</h2>
+        <p class="section-subtitle">
+          Note moyenne de 4.9/5 basée sur plus de 180 interventions réalisées dans la région de Tournai.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div style="color: #f59e0b; margin-bottom: 0.75rem; font-size: 1.1rem;">★★★★★</div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+            "Fuite importante un dimanche soir dans notre cuisine à Tournai. L'équipe d'xtense est arrivée en 25 minutes, a localisé le raccord défectueux et réparé aussitôt. Tarif tout à fait honnête pour un weekend !"
+          </p>
+          <div style="margin-top: auto; font-weight: 700; color: #ffffff;">
+            Marc V. <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: normal;">— Tournai Centre</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="color: #f59e0b; margin-bottom: 0.75rem; font-size: 1.1rem;">★★★★★</div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+            "Débouchage complet de notre colonne principale d'évacuation à Kain. Passage de caméra pour vérifier les racines dans le tuyau. Travail propre, soigné et très pédagogique."
+          </p>
+          <div style="margin-top: auto; font-weight: 700; color: #ffffff;">
+            Sophie D. <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: normal;">— Kain</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="color: #f59e0b; margin-bottom: 0.75rem; font-size: 1.1rem;">★★★★★</div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+            "Remplacement complet de notre chaudière au gaz à Froyennes. Devis respecté à la lettre, attestation de conformité délivrée sur le champ. Je recommande xtense les yeux fermés."
+          </p>
+          <div style="margin-top: auto; font-weight: 700; color: #ffffff;">
+            Édouard B. <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: normal;">— Froyennes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bar -->
+  <section class="section" style="background: linear-gradient(135deg, #075985 0%, #0369a1 100%); text-align: center; color: white;">
+    <div class="container">
+      <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">Une Urgence ou un Projet à Tournai ?</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; font-size: 1.1rem;">
+        Nos artisans plombiers sont prêts à intervenir dès maintenant. Contactez-nous pour une intervention express ou une estimation sans engagement.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+          Appeler le {emergencyPhone}
+        </a>
+        <a href="/contact" class="btn" style="background: #ffffff; color: var(--primary-dark); font-weight: 700; padding: 0.9rem 2rem;">
+          Formulaire de Contact
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

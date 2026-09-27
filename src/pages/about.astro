@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const emergencyPhone = "0472 90 18 45";
+const emergencyPhoneRaw = "+32472901845";
+---
+
+<Layout 
+  title="À Propos de xtense Plomberie | Artisan Plombier à Tournai" 
+  description="Découvrez l'histoire d'xtense : entreprise artisanale de plomberie et chauffage basée à Tournai. Plus de 15 ans d'expérience, agréments officiels et garantie décennale."
+>
+  <!-- Header -->
+  <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <span class="badge-tag">Notre Histoire & Valeurs</span>
+      <h1 class="section-title">L'Excellence Artisanale au Cœur de Tournai</h1>
+      <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
+        Fondée sur des principes de rigueur technique, d'honnêteté tarifaire et d'écoute client, <strong>xtense</strong> est l'entreprise de plomberie de référence en Wallonie picarde.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story & Values -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+        <div>
+          <span class="badge-tag">Qui sommes-nous ?</span>
+          <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1.25rem; color: #ffffff;">
+            Plus de 15 ans d'expertise sur le terrain tournaisien
+          </h2>
+          <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.25rem;">
+            Créée par des passionnés des métiers de l'eau et de l'énergie thermique, <strong>xtense</strong> a bâti sa réputation sur une volonté simple : réconcilier les particuliers et les professionnels avec les métiers du dépannage d'urgence en garantissant transparence, propreté et sérieux.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem;">
+            Qu'il s'agisse d'un débouchage complexe nécessitant un hydrocurage haute pression, de la recherche d'une infiltration invisible ou de l'installation d'une pompe à chaleur sanitaire, nous appliquons les règles de l'art les plus strictes.
+          </p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+            <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <div style="font-size: 1.75rem; font-weight: 800; color: #38bdf8;">15+</div>
+              <div style="color: var(--text-secondary); font-size: 0.9rem;">Années de métier dans le Hainaut</div>
+            </div>
+            <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <div style="font-size: 1.75rem; font-weight: 800; color: #38bdf8;">100%</div>
+              <div style="color: var(--text-secondary); font-size: 0.9rem;">Techniciens certifiés & assurés</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-lg);">
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1.5rem;">Nos 4 Engagements Capitaux</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <div style="font-weight: 700; color: #38bdf8; margin-bottom: 0.25rem;">1. Réactivité Impeccable</div>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Nous mobilisons le véhicule le plus proche de votre adresse pour être chez vous en moins de 30 minutes lors d'une urgence.</p>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: #38bdf8; margin-bottom: 0.25rem;">2. Devis Transparent & Signé</div>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Pas de frais fantômes. Nous établissons le diagnostic et vous remettons le devis avant de commencer tout travail.</p>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: #38bdf8; margin-bottom: 0.25rem;">3. Matériel de Pointe</div>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Caméras d'inspection endoscopique haute définition, détecteurs électro-acoustiques et hydrocureuses puissantes.</p>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: #38bdf8; margin-bottom: 0.25rem;">4. Chantier Laissé Propre</div>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Protection des sols, nettoyage complet après intervention et reprise de vos anciens appareils si nécessaire.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal & Certifications Banner -->
+  <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="badge-tag">Garanties & Confiance</span>
+        <h2 class="section-title">Agréments & Conformité Légale</h2>
+        <p class="section-subtitle">Toutes nos opérations respectent scrupuleusement les arrêtés royaux et régionaux belges en vigueur.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card" style="text-align: center; align-items: center;">
+          <div class="card-icon">📜</div>
+          <h3 class="card-title">Agrément Chauffagiste G1 / G2</h3>
+          <p class="card-text">Habilitation officielle pour le contrôle et l'entretien des installations gaz atmosphériques et pulsées en Région Wallonne.</p>
+        </div>
+        <div class="card" style="text-align: center; align-items: center;">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Garantie Décennale & RC Pro</h3>
+          <p class="card-text">Couverture complète de votre bien immobilier contre tout aléa ou sinistre grâce à notre assurance professionnelle.</p>
+        </div>
+        <div class="card" style="text-align: center; align-items: center;">
+          <div class="card-icon">🏢</div>
+          <h3 class="card-title">Enregistrement BCE</h3>
+          <p class="card-text">Entreprise enregistrée auprès de la Banque-Carrefour des Entreprises sous le numéro de TVA : BE0894.312.871.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call to Action -->
+  <section class="section text-center">
+    <div class="container">
+      <h2 style="font-size: 2rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Besoin d'un artisan plombier à Tournai ?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Nos équipes sont disponibles dès maintenant pour répondre à vos questions et intervenir sur votre installation.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency">
+          Appel d'urgence : {emergencyPhone}
+        </a>
+        <a href="/contact" class="btn btn-primary">
+          Formulaire de contact & Devis
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

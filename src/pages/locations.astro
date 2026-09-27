@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const localities = [
+  {
+    name: "Tournai Centre & Grand-Place",
+    zip: "7500",
+    slug: "tournai-centre",
+    delay: "15-20 min",
+    hq: true,
+    desc: "Notre siège d'intervention prioritaire. Dépannage express pour particuliers et commerces du centre historique, des quais de l'Escaut et des boulevards."
+  },
+  {
+    name: "Kain",
+    zip: "7540",
+    slug: "kain",
+    delay: "15-25 min",
+    hq: false,
+    desc: "Interventions rapides autour de la Tombe de Kain, Mont Saint-Aubert et les quartiers résidentiels pour débouchage et chaudières."
+  },
+  {
+    name: "Froyennes",
+    zip: "7503",
+    slug: "froyennes",
+    delay: "15-25 min",
+    hq: false,
+    desc: "Zone commerciale et résidentielle de Froyennes. Dépannage plomberie d'urgence et installation de sanitaires modernes."
+  },
+  {
+    name: "Antoing",
+    zip: "7640",
+    slug: "antoing",
+    delay: "20-30 min",
+    hq: false,
+    desc: "Dépannage plomberie le long de l'Escaut, Antoing, Calonne, Fontenoy et environs pour fuites et réparations d'urgence."
+  },
+  {
+    name: "Pecq & Warcoing",
+    zip: "7740",
+    slug: "pecq",
+    delay: "20-30 min",
+    hq: false,
+    desc: "Service réactif sur toute l'entité de Pecq, Hérinnes et Warcoing pour révision de chaudière et débouchage canalisation."
+  },
+  {
+    name: "Templeuve",
+    zip: "7520",
+    slug: "templeuve",
+    delay: "20-30 min",
+    hq: false,
+    desc: "Intervention rapide sur Templeuve, Blandain et Ramegnies-Chin pour sanitaires, chauffe-eau et tuyauteries."
+  },
+  {
+    name: "Rumes & La Glanerie",
+    zip: "7610",
+    slug: "rumes",
+    delay: "25-35 min",
+    hq: false,
+    desc: "Dépannage complet plomberie et chauffage dans toute la zone frontalière de Rumes et Taintignies."
+  },
+  {
+    name: "Ere & Willemeau",
+    zip: "7500 / 7506",
+    slug: "ere-willemeau",
+    delay: "20-30 min",
+    hq: false,
+    desc: "Couverture totale des villages du sud de Tournai avec camionnettes outillées pour résoudre vos pannes sur le champ."
+  },
+  {
+    name: "Leuze-en-Hainaut & Pipaix",
+    zip: "7900",
+    slug: "leuze",
+    delay: "25-35 min",
+    hq: false,
+    desc: "Interventions régulières sur Leuze pour rénovation de salle de bain, détartrage boiler et débouchage haute pression."
+  }
+];
+
+const emergencyPhone = "0472 90 18 45";
+const emergencyPhoneRaw = "+32472901845";
+---
+
+<Layout 
+  title="Zones d'Intervention Plomberie à Tournai & Wallonie Picarde | xtense" 
+  description="xtense intervient à Tournai (7500), Kain, Froyennes, Antoing, Pecq, Templeuve et dans toute la Wallonie picarde en moins de 30 minutes 24h/7j pour vos urgences plomberie."
+>
+  <!-- Header -->
+  <section class="section" style="padding-top: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <span class="badge-tag">Proximité & Réactivité</span>
+      <h1 class="section-title">Zones d'Intervention à Tournai & Environs</h1>
+      <p class="section-subtitle" style="max-width: 720px; margin: 0 auto;">
+        Basée à <strong>Tournai</strong>, l'équipe d'<strong>xtense</strong> est mobilisable 24h/24 et 7j/7 pour un dépannage en urgence ou des travaux planifiés dans toute l'agglomération tournaisienne et la Wallonie picarde.
+      </p>
+    </div>
+  </section>
+
+  <!-- Localities Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="cards-grid">
+        {localities.map((loc) => (
+          <div class="card" id={loc.slug} style={loc.hq ? "border-color: var(--border-accent); box-shadow: var(--shadow-glow);" : ""}>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <span class="badge-tag" style="margin: 0;">Code Postal: {loc.zip}</span>
+              {loc.hq && <span class="badge-tag badge-emergency" style="margin: 0;">Siège Principal</span>}
+            </div>
+            <h2 class="card-title" style="font-size: 1.35rem; margin-top: 0.75rem;">{loc.name}</h2>
+            <p class="card-text">{loc.desc}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: 1rem;">
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">
+                ⏱️ Arrivée estimée : <strong style="color: #38bdf8;">{loc.delay}</strong>
+              </span>
+              <a href={`tel:${emergencyPhoneRaw}`} class="btn btn-emergency" style="padding: 0.4rem 0.85rem; font-size: 0.825rem;">
+                Appeler
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Local Map / Commitment Box -->
+  <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="badge-tag">Engagement Local</span>
+          <h2 class="section-title">Pourquoi une présence locale à Tournai est essentielle</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            Lorsqu'un tuyau éclate ou qu'une évacuation refoule dans votre sous-sol ou votre commerce, chaque minute compte. En choisissant un artisan plombier basé au cœur de Tournai, vous évitez les frais de déplacement excessifs et les retards liés au trafic lointain.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+            Nos techniciens connaissent parfaitement les spécificités des bâtisses anciennes du centre historique de Tournai (conduits en fonte, réseaux anciens) ainsi que les installations modernes des nouveaux lotissements périurbains.
+          </p>
+          <a href="/contact" class="btn btn-primary">
+            Demander une intervention locale
+          </a>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 2.5rem;">
+          <h3 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 1.25rem;">Notre Rayon de Déplacement</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="color: #10b981; font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>0 € de frais de dossier</strong> sur toute l'agglomération de Tournai</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="color: #10b981; font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>Camionnettes 100% équipées</strong> pour réparer le jour-même</span>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="color: #10b981; font-weight: bold; font-size: 1.2rem;">✓</span>
+              <span><strong>Intervention de nuit & week-end</strong> sans interruption</span>
+            </li>
+          </ul>
+
+          <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: var(--radius-md); padding: 1.25rem; text-align: center;">
+            <div style="color: #f87171; font-weight: 700; margin-bottom: 0.35rem;">Votre commune n'est pas listée ?</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem;">
+              Nous intervenons également dans les localités avoisinantes du Hainaut occidental.
+            </p>
+            <a href={`tel:${emergencyPhoneRaw}`} style="color: #ffffff; font-weight: 800; font-size: 1.1rem; text-decoration: underline;">
+              Vérifier la disponibilité : {emergencyPhone}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
